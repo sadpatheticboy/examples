@@ -16,7 +16,7 @@ def find_elements():
     result_label.config(text=f'Количество отрицательных элементов: {negative_count}')
 
     # находим номера элементов, принадлежащих отрезку (C,D)
-    indices = [i for i, v in enumerate(x) if c < v < d]
+    indices = [i for i, v in enumerate(x) if c <= v <= d]
     result_text.config(state=tk.NORMAL)
     result_text.delete('1.0', tk.END)
     result_text.insert(tk.END, f'Номера элементов от {c} до {d}: {indices}')
