@@ -1,5 +1,4 @@
-""" Условие задачи - https://stepik.org/lesson/701975/step/11?unit=702076
-    Разбор задачи - https://www.youtube.com/watch?v=gmjwMakXk0c&ab_channel=selfedu """
+""" Условие задачи - https://stepik.org/lesson/701975/step/11?unit=702076 """
 
 from random import randint
 
