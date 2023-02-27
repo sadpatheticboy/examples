@@ -19,7 +19,6 @@ def draw_bird(x, y, new_y):
     bird = pygame.draw.rect(screen, 'yellow', [x, y, 30, 30], 0, 8)
     eye = pygame.draw.circle(screen, 'black', [x + 20, y + 10], 5)
 
-    # drawing boost lines
     if new_y < 0:
         boost_red1 = pygame.draw.rect(screen, 'red', [x + 20, y + 35, 7, 25], 0, 2)
         boost_red2 = pygame.draw.rect(screen, 'red', [x + 5, y + 35, 7, 25], 0, 2)
@@ -35,7 +34,6 @@ def draw_block(blk, y, bird):
             end_game = True
 
 
-# bird variables
 bird_x = 200
 bird_y = 255
 new_x = 0

@@ -1,26 +1,30 @@
 import tkinter as tk
 
+
 def find_elements():
     # получаем значения из полей ввода
     x_str = x_entry.get()
     c_str = c_entry.get()
     d_str = d_entry.get()
 
-    # преобразуем значения в числа
-    x = list(map(int, x_str.split()))
-    c = int(c_str)
-    d = int(d_str)
+    if ''.join(x_str.replace('-', '').split()).isdigit() == False or str(c_str) == False or str(d_str) == False:
+        result_label.config(text=f'Неккоректные значения')
+    else:
+        # преобразуем значения в числа
+        x = list(map(int, x_str.split()))
+        c = int(c_str)
+        d = int(d_str)
 
-    # находим количество отрицательных элементов массива
-    negative_count = sum(1 for i in x if i < 0)
-    result_label.config(text=f'Количество отрицательных элементов: {negative_count}')
+        # находим количество отрицательных элементов массива
+        negative_count = sum(1 for i in x if i < 0)
+        result_label.config(text=f'Количество отрицательных элементов: {negative_count}')
 
-    # находим номера элементов, принадлежащих отрезку (C,D)
-    indices = [i for i, v in enumerate(x) if c <= v <= d]
-    result_text.config(state=tk.NORMAL)
-    result_text.delete('1.0', tk.END)
-    result_text.insert(tk.END, f'Номера элементов от {c} до {d}: {indices}')
-    result_text.config(state=tk.DISABLED)
+        # находим номера элементов, принадлежащих отрезку (C,D)
+        indices = [i for i, v in enumerate(x) if c <= v <= d]
+        result_text.config(state=tk.NORMAL)
+        result_text.delete('1.0', tk.END)
+        result_text.insert(tk.END, f'Номера элементов от {c} до {d}: {indices}')
+        result_text.config(state=tk.DISABLED)
 
 # создаем графический интерфейс
 root = tk.Tk()
