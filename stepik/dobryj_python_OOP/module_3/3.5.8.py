@@ -19,6 +19,6 @@ class FileAcceptor:
 
 acceptor1 = FileAcceptor("jpg", "jpeg", "png")
 acceptor2 = FileAcceptor("png", "bmp")
-acceptor12 = acceptor1 + acceptor2    # ("jpg", "jpeg", "png", "bmp")
+acceptor12 = acceptor1 + acceptor2  # ("jpg", "jpeg", "png", "bmp")
 
 print(acceptor12)
