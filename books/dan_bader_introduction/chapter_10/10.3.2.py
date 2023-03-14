@@ -11,5 +11,8 @@ class Square(Rectangle):
     def __init__(self, side_length):
         super().__init__(side_length, side_length)
 
+
 sq = Square(4)
+print(sq.area())
+sq.width = 5
 print(sq.area())
