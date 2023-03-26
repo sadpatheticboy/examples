@@ -20,3 +20,10 @@ class Rectangle:
 
     def is_square(self):
         return self.width == self.length
+
+
+# Tests
+my_rectangle = Rectangle(5, 10)
+print(my_rectangle.area())  # should print 50
+print(my_rectangle.perimeter())  # should print 30
+print(my_rectangle.is_square())  # should print False
