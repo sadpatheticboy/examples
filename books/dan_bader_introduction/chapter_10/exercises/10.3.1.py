@@ -9,9 +9,14 @@ class Dog:
         return f"{self.name} is {self.age} years old"
 
     def speak(self, sound):
-        return f"{self.name} says {sound}"
+        print(f"{self.name} says {sound}")
 
 
 class GoldenRetriever(Dog):
     def speak(self, sound='Bark'):
         super().speak(sound)
+
+
+dog = GoldenRetriever('Sharik', 12)
+
+dog.speak()
