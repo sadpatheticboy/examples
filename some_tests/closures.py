@@ -1,6 +1,5 @@
 # Closure - замыкание
 
-
 def names():
     all_names = []
 
