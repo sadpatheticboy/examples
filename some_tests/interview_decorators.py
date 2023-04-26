@@ -1,5 +1,5 @@
 def second_outer(*dargs, **dkwargs):
-    def outer(func): # f
+    def outer(func):
         def inner(*args, **kwargs):
             attempts = dkwargs['attempts']
             while attempts > 0:
@@ -14,7 +14,17 @@ def second_outer(*dargs, **dkwargs):
     return outer
 
 
-@second_outer(attempts=2)
+def simple_deco(func):
+    def inner(*args, **kwargs):
+        print('Реклама')
+
+        return func(*args, **kwargs)
+
+    return inner
+
+
+@simple_deco
+@second_outer(attempts=3)
 def div(a, b):
     return a / b
 
