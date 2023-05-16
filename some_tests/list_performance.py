@@ -40,3 +40,25 @@ enumerate_loop()
 compr_loop()
 for_with_range()
 while_loop()
+
+print('=' * 20)
+
+
+@time_measure
+def create_list_with_range():
+    l = list(range(n))
+
+
+@time_measure
+def create_list_with_listcomps():
+    l = [i for i in range(n)]
+
+
+@time_measure
+def create_list_with_genexp():
+    l = (i for i in range(n))
+
+
+create_list_with_range()
+create_list_with_listcomps()
+create_list_with_genexp()
