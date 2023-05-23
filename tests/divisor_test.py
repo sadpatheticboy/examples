@@ -1,6 +1,6 @@
 from unittest import TestCase, main
 import doctest
-from some_tests import divisor
+from something import divisor
 
 
 def load_tests(loader, tests, ignore):  # Интеграция доктестов в работу юнит-тестов

@@ -1,6 +1,6 @@
 import pytest
 
-from some_tests.calculator import calculator
+from something.calculator import calculator
 
 
 def test_plus():
